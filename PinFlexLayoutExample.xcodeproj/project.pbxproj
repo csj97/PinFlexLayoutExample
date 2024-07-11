@@ -16,6 +16,9 @@
 		36A07D7B2C3F96BD00EC4B31 /* PinFlexLayoutExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A07D7A2C3F96BD00EC4B31 /* PinFlexLayoutExampleTests.swift */; };
 		36A07D852C3F96BD00EC4B31 /* PinFlexLayoutExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A07D842C3F96BD00EC4B31 /* PinFlexLayoutExampleUITests.swift */; };
 		36A07D872C3F96BD00EC4B31 /* PinFlexLayoutExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A07D862C3F96BD00EC4B31 /* PinFlexLayoutExampleUITestsLaunchTests.swift */; };
+		36A07D962C3FA67200EC4B31 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 36A07D952C3FA67200EC4B31 /* PinLayout */; };
+		36A07D982C3FA67C00EC4B31 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 36A07D972C3FA67C00EC4B31 /* FlexLayout */; };
+		36A07D9B2C3FABE400EC4B31 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A07D9A2C3FABE400EC4B31 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A07D962C3FA67200EC4B31 /* PinLayout in Frameworks */,
+				36A07D9B2C3FABE400EC4B31 /* Then in Frameworks */,
+				36A07D982C3FA67C00EC4B31 /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,11 @@
 			dependencies = (
 			);
 			name = PinFlexLayoutExample;
+			packageProductDependencies = (
+				36A07D952C3FA67200EC4B31 /* PinLayout */,
+				36A07D972C3FA67C00EC4B31 /* FlexLayout */,
+				36A07D9A2C3FABE400EC4B31 /* Then */,
+			);
 			productName = PinFlexLayoutExample;
 			productReference = 36A07D602C3F96B900EC4B31 /* PinFlexLayoutExample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,11 @@
 				Base,
 			);
 			mainGroup = 36A07D572C3F96B900EC4B31;
+			packageReferences = (
+				36A07D932C3F96E800EC4B31 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				36A07D942C3F96F500EC4B31 /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				36A07D992C3FABD700EC4B31 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 36A07D612C3F96B900EC4B31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -607,6 +623,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36A07D932C3F96E800EC4B31 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.5;
+			};
+		};
+		36A07D942C3F96F500EC4B31 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.10;
+			};
+		};
+		36A07D992C3FABD700EC4B31 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36A07D952C3FA67200EC4B31 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A07D932C3F96E800EC4B31 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		36A07D972C3FA67C00EC4B31 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A07D942C3F96F500EC4B31 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		36A07D9A2C3FABE400EC4B31 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A07D992C3FABD700EC4B31 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36A07D582C3F96B900EC4B31 /* Project object */;
 }
